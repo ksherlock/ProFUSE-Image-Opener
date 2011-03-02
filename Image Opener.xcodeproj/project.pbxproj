@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B672604B131DF025002ABC91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B672604A131DF025002ABC91 /* Cocoa.framework */; };
+		B6726055131DF025002ABC91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6726053131DF025002ABC91 /* InfoPlist.strings */; };
+		B6726058131DF025002ABC91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6726057131DF025002ABC91 /* main.m */; };
+		B672605B131DF025002ABC91 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B6726059131DF025002ABC91 /* Credits.rtf */; };
+		B672605E131DF025002ABC91 /* Image_OpenerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */; };
+		B6726061131DF025002ABC91 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B672605F131DF025002ABC91 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B6726046131DF025002ABC91 /* Image Opener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Opener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B672604A131DF025002ABC91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B672604D131DF025002ABC91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B672604E131DF025002ABC91 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B672604F131DF025002ABC91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B6726052131DF025002ABC91 /* Image_Opener-Info.plist */ = {isa = PBXFileReference; path = "Image_Opener-Info.plist"; sourceTree = "<group>"; };
+		B6726054131DF025002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6726056131DF025002ABC91 /* Image_Opener-Prefix.pch */ = {isa = PBXFileReference; path = "Image_Opener-Prefix.pch"; sourceTree = "<group>"; };
+		B6726057131DF025002ABC91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B672605A131DF025002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B672605C131DF025002ABC91 /* Image_OpenerAppDelegate.h */ = {isa = PBXFileReference; path = Image_OpenerAppDelegate.h; sourceTree = "<group>"; };
+		B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image_OpenerAppDelegate.m; sourceTree = "<group>"; };
+		B6726060131DF025002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B6726043131DF025002ABC91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B672604B131DF025002ABC91 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B672603B131DF025002ABC91 = {
+			isa = PBXGroup;
+			children = (
+				B6726050131DF025002ABC91 /* Image Opener */,
+				B6726049131DF025002ABC91 /* Frameworks */,
+				B6726047131DF025002ABC91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B6726047131DF025002ABC91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6726046131DF025002ABC91 /* Image Opener.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6726049131DF025002ABC91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B672604A131DF025002ABC91 /* Cocoa.framework */,
+				B672604C131DF025002ABC91 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B672604C131DF025002ABC91 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B672604D131DF025002ABC91 /* AppKit.framework */,
+				B672604E131DF025002ABC91 /* CoreData.framework */,
+				B672604F131DF025002ABC91 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B6726050131DF025002ABC91 /* Image Opener */ = {
+			isa = PBXGroup;
+			children = (
+				B672605C131DF025002ABC91 /* Image_OpenerAppDelegate.h */,
+				B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */,
+				B672605F131DF025002ABC91 /* MainMenu.xib */,
+				B6726051131DF025002ABC91 /* Supporting Files */,
+			);
+			path = "Image Opener";
+			sourceTree = "<group>";
+		};
+		B6726051131DF025002ABC91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6726052131DF025002ABC91 /* Image_Opener-Info.plist */,
+				B6726053131DF025002ABC91 /* InfoPlist.strings */,
+				B6726056131DF025002ABC91 /* Image_Opener-Prefix.pch */,
+				B6726057131DF025002ABC91 /* main.m */,
+				B6726059131DF025002ABC91 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B6726045131DF025002ABC91 /* Image Opener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6726064131DF025002ABC91 /* Build configuration list for PBXNativeTarget "Image Opener" */;
+			buildPhases = (
+				B6726042131DF025002ABC91 /* Sources */,
+				B6726043131DF025002ABC91 /* Frameworks */,
+				B6726044131DF025002ABC91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Image Opener";
+			productName = "Image Opener";
+			productReference = B6726046131DF025002ABC91 /* Image Opener.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B672603D131DF025002ABC91 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B6726040131DF025002ABC91 /* Build configuration list for PBXProject "Image Opener" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B672603B131DF025002ABC91;
+			productRefGroup = B6726047131DF025002ABC91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6726045131DF025002ABC91 /* Image Opener */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B6726044131DF025002ABC91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6726055131DF025002ABC91 /* InfoPlist.strings in Resources */,
+				B672605B131DF025002ABC91 /* Credits.rtf in Resources */,
+				B6726061131DF025002ABC91 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B6726042131DF025002ABC91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6726058131DF025002ABC91 /* main.m in Sources */,
+				B672605E131DF025002ABC91 /* Image_OpenerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B6726053131DF025002ABC91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6726054131DF025002ABC91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B6726059131DF025002ABC91 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B672605A131DF025002ABC91 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B672605F131DF025002ABC91 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6726060131DF025002ABC91 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B6726062131DF025002ABC91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B6726063131DF025002ABC91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B6726065131DF025002ABC91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Image Opener/Image_Opener-Prefix.pch";
+				INFOPLIST_FILE = "Image Opener/Image_Opener-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B6726066131DF025002ABC91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Image Opener/Image_Opener-Prefix.pch";
+				INFOPLIST_FILE = "Image Opener/Image_Opener-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B6726040131DF025002ABC91 /* Build configuration list for PBXProject "Image Opener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6726062131DF025002ABC91 /* Debug */,
+				B6726063131DF025002ABC91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6726064131DF025002ABC91 /* Build configuration list for PBXNativeTarget "Image Opener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6726065131DF025002ABC91 /* Debug */,
+				B6726066131DF025002ABC91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B672603D131DF025002ABC91 /* Project object */;
+}
