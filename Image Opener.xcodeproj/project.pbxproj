@@ -16,8 +16,8 @@
 		B6726069131DF054002ABC91 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6726067131DF054002ABC91 /* Window.xib */; };
 		B672606D131DF78E002ABC91 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B672606C131DF78E002ABC91 /* WindowController.m */; };
 		B672607D131F5570002ABC91 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B672607C131F5570002ABC91 /* Icon.icns */; };
-		B68ACF7A1320906300B64522 /* profuse in Copy Files */ = {isa = PBXBuildFile; fileRef = B68ACF791320906300B64522 /* profuse */; };
-		B68ACF7D1320906900B64522 /* fuse_pascal in Copy Files */ = {isa = PBXBuildFile; fileRef = B68ACF7C1320906900B64522 /* fuse_pascal */; };
+		B68ACF81132094FB00B64522 /* profuse in Copy Files */ = {isa = PBXBuildFile; fileRef = B68ACF7F132094FB00B64522 /* profuse */; };
+		B68ACF82132094FB00B64522 /* fuse_pascal in Copy Files */ = {isa = PBXBuildFile; fileRef = B68ACF80132094FB00B64522 /* fuse_pascal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +27,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				B68ACF7A1320906300B64522 /* profuse in Copy Files */,
-				B68ACF7D1320906900B64522 /* fuse_pascal in Copy Files */,
+				B68ACF81132094FB00B64522 /* profuse in Copy Files */,
+				B68ACF82132094FB00B64522 /* fuse_pascal in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,8 +53,8 @@
 		B672606B131DF78E002ABC91 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
 		B672606C131DF78E002ABC91 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
 		B672607C131F5570002ABC91 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
-		B68ACF791320906300B64522 /* profuse */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = profuse; path = "../../../Desktop/iPhone binaries/ProFUSE installer/2011-02-28/profuse"; sourceTree = "<group>"; };
-		B68ACF7C1320906900B64522 /* fuse_pascal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = fuse_pascal; path = "../../../Desktop/iPhone binaries/ProFUSE installer/2011-02-28/fuse_pascal"; sourceTree = "<group>"; };
+		B68ACF7F132094FB00B64522 /* profuse */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = profuse; sourceTree = "<group>"; };
+		B68ACF80132094FB00B64522 /* fuse_pascal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = fuse_pascal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 		B672606A131DF0CD002ABC91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B68ACF7C1320906900B64522 /* fuse_pascal */,
-				B68ACF791320906300B64522 /* profuse */,
+				B68ACF7F132094FB00B64522 /* profuse */,
+				B68ACF80132094FB00B64522 /* fuse_pascal */,
 				B672607C131F5570002ABC91 /* Icon.icns */,
 				B6726059131DF025002ABC91 /* Credits.rtf */,
 				B672605F131DF025002ABC91 /* MainMenu.xib */,
