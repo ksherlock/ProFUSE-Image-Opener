@@ -56,7 +56,7 @@ static const char *TagToFormat(NSInteger tag)
 
 - (void)dealloc
 {
-    NSLog(@"%s %@", sel_getName(_cmd), self);
+    //NSLog(@"%s %@", sel_getName(_cmd), self);
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
@@ -185,25 +185,34 @@ static const char *TagToFormat(NSInteger tag)
 
 -(void)runTask
 {
-    NSTask *task;
     NSPipe *pipe = [NSPipe pipe];
     NSString *launchPath;
     NSArray *argv;
-    NSFileHandle *handle;
     NSNotificationCenter *nc;
+    NSString *exe;
     
-    task = [[NSTask alloc] init];
+    _task = [[NSTask alloc] init];
     
-    [task setStandardError: pipe];
-    [task setStandardOutput: pipe];
-    [task setStandardInput: [NSFileHandle fileHandleWithNullDevice]];
+    [_task setStandardError: pipe];
+    [_task setStandardOutput: pipe];
+    [_task setStandardInput: [NSFileHandle fileHandleWithNullDevice]];
     
-    handle = [pipe fileHandleForReading];
+    _handle = [[pipe fileHandleForReading] retain];
     
     
-    launchPath = @"launch path...";
+    switch ([_fsMatrix selectedTag])
+    {
+        case 1:
+        default:
+            exe = @"profuse";
+            break;
+        case 2:
+            exe = @"fuse_pascal";
+            break;
+    }
     
-    launchPath = [[NSBundle mainBundle] pathForAuxiliaryExecutable: @"profuse"];
+    launchPath = [[NSBundle mainBundle] pathForAuxiliaryExecutable: exe];
+
     
     argv = [NSArray arrayWithObjects:
             @"-r",
@@ -213,36 +222,33 @@ static const char *TagToFormat(NSInteger tag)
     
     
     
-    [task setLaunchPath: launchPath];
-    [task setArguments: argv];
+    [_task setLaunchPath: launchPath];
+    [_task setArguments: argv];
     
     [self appendString: launchPath];
+
     for (NSString *string in argv)
     {
-        [self appendString: string];
         [self appendString: @" "];
+        [self appendString: string];
     }
     [self appendString: @"\n\n"];
     
-    
-    return;
     
     nc = [NSNotificationCenter defaultCenter];
     
     [nc addObserver: self 
            selector: @selector(taskComplete:) 
                name: NSTaskDidTerminateNotification 
-             object: task];
+             object: _task];
     [nc addObserver: self 
            selector: @selector(readComplete:) 
                name: NSFileHandleReadCompletionNotification 
-             object: handle];
+             object: _handle];
     
  
-    _task = task;
-    _handle = [handle retain];
-    [task launch];
-    [handle readInBackgroundAndNotify];
+    [_task launch];
+    [_handle readInBackgroundAndNotify];
      
 }
 
@@ -269,7 +275,7 @@ static const char *TagToFormat(NSInteger tag)
 
 -(void)taskComplete: (NSNotification *)notification
 {
-    
+    BOOL ok = NO;
     NSTaskTerminationReason reason;
     int status;
     NSString *string = nil;
@@ -280,7 +286,11 @@ static const char *TagToFormat(NSInteger tag)
     if (reason == NSTaskTerminationReasonExit)
     {
         
-        if (status == 0) string = @"\n\n[Success]\n\n";
+        if (status == 0)
+        {
+            string = @"\n\n[Success]\n\n";
+            ok = YES;
+        }
         else string = @"\n\n[An error occurred]\n\n";
     }
     else
@@ -297,7 +307,7 @@ static const char *TagToFormat(NSInteger tag)
     [_task release];
     _task = nil;
     
-    [_mountButton setEnabled: YES];
+    if (!ok) [_mountButton setEnabled: YES];
 
 }
 #pragma mark -

@@ -39,7 +39,7 @@
             NSURL *url = [[panel URLs] lastObject];
             NSString *path = [url isFileURL] ? [url path] : nil;
             
-            NSLog(@"%d %@", (int)result, path);
+            //NSLog(@"%d %@", (int)result, path);
             
             if (path)
             {
