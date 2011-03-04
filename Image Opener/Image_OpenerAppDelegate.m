@@ -11,11 +11,19 @@
 
 @implementation Image_OpenerAppDelegate
 
-@synthesize window;
+@synthesize window = _window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    _controller = [[NSDocumentController sharedDocumentController] retain];
     // Insert code here to initialize your application
+}
+
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
+{
+    WindowController *controller;
+    controller = [WindowController controllerWithFilePath: filename];
+    return YES;
 }
 
 -(IBAction)openDocument:(id)sender
@@ -35,7 +43,6 @@
         
         if (result == 1)
         {
-            WindowController *controller;
             NSURL *url = [[panel URLs] lastObject];
             NSString *path = [url isFileURL] ? [url path] : nil;
             
@@ -43,7 +50,9 @@
             
             if (path)
             {
-                controller = [WindowController controllerWithFilePath: path];
+                [self application: nil openFile: path];
+                
+                [_controller noteNewRecentDocumentURL: url];
             }
             
         }

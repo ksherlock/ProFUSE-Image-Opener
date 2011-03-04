@@ -10,7 +10,8 @@
 
 @interface Image_OpenerAppDelegate : NSObject <NSApplicationDelegate> {
 @private
-    NSWindow *window;
+    NSWindow *_window;
+    NSDocumentController *_controller;
 }
 
 @property (assign) IBOutlet NSWindow *window;
