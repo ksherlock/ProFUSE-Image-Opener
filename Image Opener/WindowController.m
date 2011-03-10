@@ -13,25 +13,75 @@
 
 @synthesize filePath = _filePath;
 
+enum {
+    kTagLucky = 1,
+    kTag2MG,
+    kTagDC42,
+    kTagSDK,
+    kTagDavex,
+    kTagPO,
+    kTagDO
+};
+
 static const char *TagToFormat(NSInteger tag)
 {
     switch (tag)
     {
 
-        case 1:
+        case kTagPO:
         default:
             return "po";
-        case 2:
+        case kTagDO:
             return "do";
-        case 3:
+        case kTag2MG:
             return "2img";
-        case 4:
+        case kTagDC42:
             return "dc42";
-        case 5:
+        case kTagDavex:
             return "davex";
+        case kTagSDK:
+            return  "sdk";
+            
+    }
+}
+
+static unsigned ExtToTag(NSString *ext)
+{
+    ext = [ext lowercaseString];
     
+    if ([ext isEqualToString: @"po"] ||
+        [ext isEqualToString: @"raw"])
+    {
+        return kTagPO;
+    }
+    else if ([ext isEqualToString: @"do"] ||
+             [ext isEqualToString: @"dsk"])
+    {
+        return kTagDO;
+    }
+    else if ([ext isEqualToString: @"2mg"] ||
+             [ext isEqualToString: @"2img"])
+    {
+        return kTag2MG;
+    }
+    else if ([ext isEqualToString: @"dc42"] ||
+             [ext isEqualToString: @"dc"])
+    {
+        return kTagDC42;
+    }
+    else if ([ext isEqualToString: @"davex"] ||
+             [ext isEqualToString: @"dvx"])
+    {
+        return kTagDavex;
+    }
+
+    else if ([ext isEqualToString: @"sdk"] ||
+             [ext isEqualToString: @"shk"])
+    {
+        return kTagDavex;
     }
     
+    return kTagPO;
 }
 
 +(id)new
@@ -83,11 +133,11 @@ static const char *TagToFormat(NSInteger tag)
 
 -(void)setFilePath:(NSString *)filePath
 {
-    NSString *ext;
+    //NSString *ext;
     NSFileManager *manager;
     NSDictionary *dict;
     NSError *error;
-    unsigned format;
+    //unsigned format;
     
     if (_filePath == filePath) return;
     
@@ -113,7 +163,7 @@ static const char *TagToFormat(NSInteger tag)
     else
     {
         NSString *ss = @"";
-        size_t size = [(NSNumber *)[dict objectForKey: NSFileSize] unsignedLongLongValue];
+        off_t size = [(NSNumber *)[dict objectForKey: NSFileSize] unsignedLongLongValue];
         
         if (size < 1024) 
             ss = [NSString stringWithFormat: @"%u B", (unsigned)size];
@@ -130,38 +180,12 @@ static const char *TagToFormat(NSInteger tag)
     // set the default image format.
     
     
-    ext = [_filePath pathExtension];
+    //ext = [_filePath pathExtension];
 
-    ext = [ext lowercaseString];
+    //format = ExtToTag(ext);
     
-    format = 1;
-    
-    if ([ext isEqualToString: @"po"] ||
-        [ext isEqualToString: @"raw"])
-    {
-        format = 1;
-    }
-    else if ([ext isEqualToString: @"do"] ||
-             [ext isEqualToString: @"dsk"])
-    {
-        format = 2;
-    }
-    else if ([ext isEqualToString: @"2mg"] ||
-             [ext isEqualToString: @"2img"])
-    {
-        format = 3;
-    }
-    else if ([ext isEqualToString: @"dc42"])
-    {
-        format = 4;
-    }
-    else if ([ext isEqualToString: @"davex"] ||
-             [ext isEqualToString: @"dvx"])
-    {
-        format = 5;
-    }
-    
-    [_ifMatrix selectCellWithTag: format];
+
+    [_ifMatrix selectCellWithTag: kTagLucky];
     [_fsMatrix selectCellWithTag: 1]; // assume prodos.
 
 }
@@ -187,9 +211,11 @@ static const char *TagToFormat(NSInteger tag)
 {
     NSPipe *pipe = [NSPipe pipe];
     NSString *launchPath;
-    NSArray *argv;
+    NSMutableArray *argv;
     NSNotificationCenter *nc;
     NSString *exe;
+    
+    NSInteger tag;
     
     _task = [[NSTask alloc] init];
     
@@ -214,13 +240,19 @@ static const char *TagToFormat(NSInteger tag)
     launchPath = [[NSBundle mainBundle] pathForAuxiliaryExecutable: exe];
 
     
-    argv = [NSArray arrayWithObjects:
-            @"-r",
-            [NSString stringWithFormat: @"--format=%s", TagToFormat([_ifMatrix selectedTag])],
-            _filePath
-            , nil];
     
+    argv = [NSMutableArray arrayWithCapacity: 4];
     
+    [argv addObject: @"-r"]; // read-only.
+    
+    tag = [_ifMatrix selectedTag];
+    if (tag != kTagLucky)
+    {
+        [argv addObject: [NSString stringWithFormat: @"--format=%s", TagToFormat(tag)]];
+    }
+    
+    [argv addObject: _filePath];
+
     
     [_task setLaunchPath: launchPath];
     [_task setArguments: argv];
