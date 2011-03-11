@@ -15,7 +15,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    _controller = [[NSDocumentController sharedDocumentController] retain];
     // Insert code here to initialize your application
 }
 
@@ -52,7 +51,7 @@
             {
                 [self application: nil openFile: path];
                 
-                [_controller noteNewRecentDocumentURL: url];
+                [[NSDocumentController sharedDocumentController] noteNewRecentDocumentURL: url];
             }
             
         }
