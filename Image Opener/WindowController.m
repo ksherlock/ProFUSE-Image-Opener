@@ -347,6 +347,12 @@ static unsigned ExtToTag(NSString *ext)
 
 - (void)windowWillClose:(NSNotification *)notification
 {
+    if (_filePath)
+    {
+        NSURL *url = [NSURL fileURLWithPath: _filePath isDirectory: NO];
+        [[NSDocumentController sharedDocumentController] noteNewRecentDocumentURL: url];
+    } 
+
     [self release];
 }
 
