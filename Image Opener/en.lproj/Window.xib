@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1294</string>
+			<string key="NS.object.0">1305</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -73,7 +73,7 @@
 										<object class="NSTextView" id="858937753">
 											<reference key="NSNextResponder" ref="84239128"/>
 											<int key="NSvFlags">2322</int>
-											<string key="NSFrameSize">{480, 124}</string>
+											<string key="NSFrame">{{0, 16}, {480, 108}}</string>
 											<reference key="NSSuperview" ref="84239128"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="951941751"/>
@@ -681,6 +681,7 @@ QXBwbGUgQ29tcHV0ZXIsIEluYy4sIDIwMDUAAAAAA</bytes>
 													<string key="NSContents">ProDOS Order</string>
 													<reference key="NSSupport" ref="26"/>
 													<reference key="NSControlView" ref="452272200"/>
+													<int key="NSTag">6</int>
 													<int key="NSButtonFlags">1211912703</int>
 													<int key="NSButtonFlags2">0</int>
 													<reference key="NSAlternateImage" ref="790458555"/>
@@ -693,6 +694,7 @@ QXBwbGUgQ29tcHV0ZXIsIEluYy4sIDIwMDUAAAAAA</bytes>
 													<string key="NSContents">DOS Order</string>
 													<reference key="NSSupport" ref="26"/>
 													<reference key="NSControlView" ref="452272200"/>
+													<int key="NSTag">7</int>
 													<int key="NSButtonFlags">1211912703</int>
 													<int key="NSButtonFlags2">0</int>
 													<reference key="NSAlternateImage" ref="790458555"/>
