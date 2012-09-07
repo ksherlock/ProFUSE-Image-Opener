@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61F50B11329D7040061B88D /* fuse_pascal in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AD1329D6DD0061B88D /* fuse_pascal */; };
+		B61F50B21329D7040061B88D /* profuse in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AF1329D6E90061B88D /* profuse */; };
 		B672604B131DF025002ABC91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B672604A131DF025002ABC91 /* Cocoa.framework */; };
 		B6726055131DF025002ABC91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6726053131DF025002ABC91 /* InfoPlist.strings */; };
 		B6726058131DF025002ABC91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6726057131DF025002ABC91 /* main.m */; };
@@ -16,8 +18,6 @@
 		B6726069131DF054002ABC91 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6726067131DF054002ABC91 /* Window.xib */; };
 		B672606D131DF78E002ABC91 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B672606C131DF78E002ABC91 /* WindowController.m */; };
 		B672607D131F5570002ABC91 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B672607C131F5570002ABC91 /* Icon.icns */; };
-		B68ACF81132094FB00B64522 /* profuse in Copy Files */ = {isa = PBXBuildFile; fileRef = B68ACF7F132094FB00B64522 /* profuse */; };
-		B68ACF82132094FB00B64522 /* fuse_pascal in Copy Files */ = {isa = PBXBuildFile; fileRef = B68ACF80132094FB00B64522 /* fuse_pascal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +27,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				B68ACF81132094FB00B64522 /* profuse in Copy Files */,
-				B68ACF82132094FB00B64522 /* fuse_pascal in Copy Files */,
+				B61F50B11329D7040061B88D /* fuse_pascal in Copy Files */,
+				B61F50B21329D7040061B88D /* profuse in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B61F50AD1329D6DD0061B88D /* fuse_pascal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = fuse_pascal; sourceTree = "<group>"; };
+		B61F50AF1329D6E90061B88D /* profuse */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = profuse; sourceTree = "<group>"; };
 		B6726046131DF025002ABC91 /* Image Opener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Opener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B672604A131DF025002ABC91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B672604D131DF025002ABC91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -53,8 +55,6 @@
 		B672606B131DF78E002ABC91 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
 		B672606C131DF78E002ABC91 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
 		B672607C131F5570002ABC91 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
-		B68ACF7F132094FB00B64522 /* profuse */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = profuse; sourceTree = "<group>"; };
-		B68ACF80132094FB00B64522 /* fuse_pascal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = fuse_pascal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 		B672606A131DF0CD002ABC91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B68ACF7F132094FB00B64522 /* profuse */,
-				B68ACF80132094FB00B64522 /* fuse_pascal */,
+				B61F50AD1329D6DD0061B88D /* fuse_pascal */,
+				B61F50AF1329D6E90061B88D /* profuse */,
 				B672607C131F5570002ABC91 /* Icon.icns */,
 				B6726059131DF025002ABC91 /* Credits.rtf */,
 				B672605F131DF025002ABC91 /* MainMenu.xib */,
