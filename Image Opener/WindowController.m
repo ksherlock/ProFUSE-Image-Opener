@@ -100,7 +100,9 @@ static unsigned ExtToTag(NSString *ext)
     [window makeKeyAndOrderFront: nil];
     [window makeFirstResponder: nil];
     
+    // if auto-released, the window will close.
     return controller;
+    //return [controller autorelease];
 }
 
 
@@ -300,7 +302,9 @@ static unsigned ExtToTag(NSString *ext)
         NSString *string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
 
         [self appendString: string];
-        [_handle readInBackgroundAndNotify];        
+        [string release];
+
+        [_handle readInBackgroundAndNotify];
     }
     
 }
