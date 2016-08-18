@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B61F50B11329D7040061B88D /* fuse_pascal in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AD1329D6DD0061B88D /* fuse_pascal */; };
-		B61F50B21329D7040061B88D /* profuse in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AF1329D6E90061B88D /* profuse */; };
+		B61F50B11329D7040061B88D /* fuse_pascal in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AD1329D6DD0061B88D /* fuse_pascal */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B61F50B21329D7040061B88D /* profuse in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AF1329D6E90061B88D /* profuse */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B63BC07B1D654CEE00412B44 /* IODocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63BC07A1D654CEE00412B44 /* IODocumentController.m */; };
+		B63BC07E1D6552EB00412B44 /* IODocument.m in Sources */ = {isa = PBXBuildFile; fileRef = B63BC07D1D6552EA00412B44 /* IODocument.m */; };
 		B672604B131DF025002ABC91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B672604A131DF025002ABC91 /* Cocoa.framework */; };
 		B6726055131DF025002ABC91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6726053131DF025002ABC91 /* InfoPlist.strings */; };
 		B6726058131DF025002ABC91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6726057131DF025002ABC91 /* main.m */; };
 		B672605B131DF025002ABC91 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B6726059131DF025002ABC91 /* Credits.rtf */; };
 		B672605E131DF025002ABC91 /* Image_OpenerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */; };
 		B6726061131DF025002ABC91 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B672605F131DF025002ABC91 /* MainMenu.xib */; };
-		B6726069131DF054002ABC91 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6726067131DF054002ABC91 /* Window.xib */; };
+		B6726069131DF054002ABC91 /* IODocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6726067131DF054002ABC91 /* IODocument.xib */; };
 		B672606D131DF78E002ABC91 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B672606C131DF78E002ABC91 /* WindowController.m */; };
 		B672607D131F5570002ABC91 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B672607C131F5570002ABC91 /* Icon.icns */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,11 @@
 /* Begin PBXFileReference section */
 		B61F50AD1329D6DD0061B88D /* fuse_pascal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = fuse_pascal; sourceTree = "<group>"; };
 		B61F50AF1329D6E90061B88D /* profuse */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = profuse; sourceTree = "<group>"; };
+		B63BC0791D654CEE00412B44 /* IODocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IODocumentController.h; sourceTree = "<group>"; };
+		B63BC07A1D654CEE00412B44 /* IODocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IODocumentController.m; sourceTree = "<group>"; };
+		B63BC07C1D6552EA00412B44 /* IODocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IODocument.h; sourceTree = "<group>"; };
+		B63BC07D1D6552EA00412B44 /* IODocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IODocument.m; sourceTree = "<group>"; };
+		B63BC07F1D65DFF100412B44 /* Image Opener.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Image Opener.entitlements"; sourceTree = "<group>"; };
 		B6726046131DF025002ABC91 /* Image Opener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Opener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B672604A131DF025002ABC91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B672604D131DF025002ABC91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -51,7 +58,7 @@
 		B672605C131DF025002ABC91 /* Image_OpenerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image_OpenerAppDelegate.h; sourceTree = "<group>"; };
 		B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image_OpenerAppDelegate.m; sourceTree = "<group>"; };
 		B6726060131DF025002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B6726068131DF054002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Window.xib; sourceTree = "<group>"; };
+		B6726068131DF054002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IODocument.xib; sourceTree = "<group>"; };
 		B672606B131DF78E002ABC91 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
 		B672606C131DF78E002ABC91 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
 		B672607C131F5570002ABC91 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
@@ -108,8 +115,13 @@
 		B6726050131DF025002ABC91 /* Image Opener */ = {
 			isa = PBXGroup;
 			children = (
+				B63BC07F1D65DFF100412B44 /* Image Opener.entitlements */,
+				B63BC07C1D6552EA00412B44 /* IODocument.h */,
+				B63BC07D1D6552EA00412B44 /* IODocument.m */,
 				B672605C131DF025002ABC91 /* Image_OpenerAppDelegate.h */,
 				B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */,
+				B63BC0791D654CEE00412B44 /* IODocumentController.h */,
+				B63BC07A1D654CEE00412B44 /* IODocumentController.m */,
 				B672606B131DF78E002ABC91 /* WindowController.h */,
 				B672606C131DF78E002ABC91 /* WindowController.m */,
 				B672606A131DF0CD002ABC91 /* Resources */,
@@ -137,7 +149,7 @@
 				B672607C131F5570002ABC91 /* Icon.icns */,
 				B6726059131DF025002ABC91 /* Credits.rtf */,
 				B672605F131DF025002ABC91 /* MainMenu.xib */,
-				B6726067131DF054002ABC91 /* Window.xib */,
+				B6726067131DF054002ABC91 /* IODocument.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -168,6 +180,18 @@
 /* Begin PBXProject section */
 		B672603D131DF025002ABC91 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					B6726045131DF025002ABC91 = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
 			buildConfigurationList = B6726040131DF025002ABC91 /* Build configuration list for PBXProject "Image Opener" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -193,7 +217,7 @@
 				B6726055131DF025002ABC91 /* InfoPlist.strings in Resources */,
 				B672605B131DF025002ABC91 /* Credits.rtf in Resources */,
 				B6726061131DF025002ABC91 /* MainMenu.xib in Resources */,
-				B6726069131DF054002ABC91 /* Window.xib in Resources */,
+				B6726069131DF054002ABC91 /* IODocument.xib in Resources */,
 				B672607D131F5570002ABC91 /* Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63BC07B1D654CEE00412B44 /* IODocumentController.m in Sources */,
 				B6726058131DF025002ABC91 /* main.m in Sources */,
+				B63BC07E1D6552EB00412B44 /* IODocument.m in Sources */,
 				B672605E131DF025002ABC91 /* Image_OpenerAppDelegate.m in Sources */,
 				B672606D131DF78E002ABC91 /* WindowController.m in Sources */,
 			);
@@ -238,12 +264,12 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
-		B6726067131DF054002ABC91 /* Window.xib */ = {
+		B6726067131DF054002ABC91 /* IODocument.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B6726068131DF054002ABC91 /* en */,
 			);
-			name = Window.xib;
+			name = IODocument.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -252,13 +278,25 @@
 		B6726062131DF025002ABC91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
@@ -269,11 +307,22 @@
 		B6726063131DF025002ABC91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
@@ -284,12 +333,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Image Opener/Image Opener.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Image Opener/Image_Opener-Prefix.pch";
 				INFOPLIST_FILE = "Image Opener/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ksherlock.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -299,12 +352,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Image Opener/Image Opener.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Image Opener/Image_Opener-Prefix.pch";
 				INFOPLIST_FILE = "Image Opener/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ksherlock.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
