@@ -11,8 +11,19 @@
 			<array>
 				<string>*</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>DiskImage</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>****</string>
+				<string></string>
+			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
+			<key>LSTypeIsPackage</key>
+			<integer>0</integer>
+			<key>NSDocumentClass</key>
+			<string>IODocument</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -20,7 +31,7 @@
 	<key>CFBundleIconFile</key>
 	<string>Icon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.ksherlock.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -31,8 +42,6 @@
 	<string>1.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array/>
 	<key>CFBundleVersion</key>
 	<string>1.0.1</string>
 	<key>LSApplicationCategoryType</key>
@@ -43,11 +52,5 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>NSServices</key>
-	<array/>
-	<key>UTExportedTypeDeclarations</key>
-	<array/>
-	<key>UTImportedTypeDeclarations</key>
-	<array/>
 </dict>
 </plist>

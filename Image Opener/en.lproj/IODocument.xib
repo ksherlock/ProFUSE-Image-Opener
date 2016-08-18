@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11173.2"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="IODocument">
+            <connections>
+                <outlet property="_fsMatrix" destination="17" id="40"/>
+                <outlet property="_ifMatrix" destination="21" id="41"/>
+                <outlet property="_mountButton" destination="11" id="43"/>
+                <outlet property="_nameView" destination="33" id="38"/>
+                <outlet property="_sizeView" destination="35" id="39"/>
+                <outlet property="_textView" destination="8" id="42"/>
+                <outlet property="window" destination="1" id="37"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="1">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="420"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <view key="contentView" id="2">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="420"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="5">
+                        <rect key="frame" x="-1" y="-1" width="482" height="168"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <clipView key="contentView" id="wG1-Of-dzm">
+                            <rect key="frame" x="1" y="1" width="480" height="166"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView editable="NO" importsGraphics="NO" richText="NO" allowsNonContiguousLayout="YES" spellingCorrection="YES" id="8">
+                                    <rect key="frame" x="0.0" y="22" width="480" height="166"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="480" height="166"/>
+                                    <size key="maxSize" width="480" height="10000000"/>
+                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="7">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="6">
+                            <rect key="frame" x="466" y="1" width="15" height="133"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <button verticalHuggingPriority="750" id="11">
+                        <rect key="frame" x="360" y="175" width="100" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="roundTextured" title="Mount" bezelStyle="texturedRounded" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="12">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="mountButton:" target="-2" id="45"/>
+                        </connections>
+                    </button>
+                    <box autoresizesSubviews="NO" borderType="line" title="File System" id="28">
+                        <rect key="frame" x="17" y="197" width="100" height="178"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="0YI-bn-yk4">
+                            <rect key="frame" x="1" y="1" width="98" height="162"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" id="17">
+                                    <rect key="frame" x="18" y="114" width="62" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="cellSize" width="62" height="18"/>
+                                    <size key="intercellSpacing" width="4" height="2"/>
+                                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="18">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <cells>
+                                        <column>
+                                            <buttonCell type="radio" title="ProDOS" imagePosition="left" alignment="left" controlSize="small" state="on" tag="1" inset="2" id="19">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="Pascal" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="20">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                        </column>
+                                    </cells>
+                                </matrix>
+                            </subviews>
+                        </view>
+                    </box>
+                    <box autoresizesSubviews="NO" borderType="line" title="Disk Image Format" id="29">
+                        <rect key="frame" x="119" y="197" width="172" height="178"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="aZY-DD-HW7">
+                            <rect key="frame" x="1" y="1" width="170" height="162"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" id="21">
+                                    <rect key="frame" x="18" y="14" width="134" height="138"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="cellSize" width="134" height="18"/>
+                                    <size key="intercellSpacing" width="4" height="2"/>
+                                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="22">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <cells>
+                                        <column>
+                                            <buttonCell type="radio" title="I’m Feeling Lucky" imagePosition="left" alignment="left" controlSize="small" state="on" tag="1" inset="2" id="23">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="Universal Disk Image" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="24">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="DiskCopy 4.2" imagePosition="left" alignment="left" controlSize="small" tag="3" inset="2" id="25">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="ShrinkIt Disk Image" imagePosition="left" alignment="left" controlSize="small" tag="4" inset="2" id="26">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="Davex Disk Image" imagePosition="left" alignment="left" controlSize="small" tag="5" inset="2" id="27">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="ProDOS Order" imagePosition="left" alignment="left" controlSize="small" tag="6" inset="2" id="46">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="DOS Order" imagePosition="left" alignment="left" controlSize="small" tag="7" inset="2" id="47">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                        </column>
+                                    </cells>
+                                </matrix>
+                            </subviews>
+                        </view>
+                    </box>
+                    <box autoresizesSubviews="NO" borderType="line" title="Other Options" id="30">
+                        <rect key="frame" x="293" y="197" width="170" height="178"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="eax-o3-0PV">
+                            <rect key="frame" x="1" y="1" width="168" height="162"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <button id="31">
+                                    <rect key="frame" x="16" y="136" width="86" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="check" title="Read Only" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" state="on" inset="2" id="32">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                </button>
+                            </subviews>
+                        </view>
+                    </box>
+                    <textField verticalHuggingPriority="750" id="33">
+                        <rect key="frame" x="17" y="383" width="274" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="My Disk Image.2mg" id="34">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="35">
+                        <rect key="frame" x="293" y="383" width="170" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="800K" id="36">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <contentBorderThickness minY="22"/>
+            <connections>
+                <outlet property="delegate" destination="-2" id="44"/>
+            </connections>
+        </window>
+    </objects>
+</document>

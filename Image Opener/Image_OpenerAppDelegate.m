@@ -8,6 +8,7 @@
 
 #import "Image_OpenerAppDelegate.h"
 #import "WindowController.h"
+#import "IODocumentController.h"
 
 @implementation Image_OpenerAppDelegate
 
@@ -16,15 +17,33 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+
+
 }
 
+-(void)applicationWillFinishLaunching:(NSNotification *)notification {
+
+    // initialize the shared document controller.
+    //[[IODocumentController alloc] init];
+}
+
+#if 0
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
-    WindowController *controller;
-    controller = [WindowController controllerWithFilePath: filename];
+    [WindowController controllerWithFilePath: filename];
     return YES;
 }
+#endif
 
+-(BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender {
+    return NO;
+}
+
+-(BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+    return NO;
+}
+
+#if 0
 -(IBAction)openDocument:(id)sender
 {
     NSOpenPanel *panel;
@@ -49,7 +68,8 @@
             
             if (path)
             {
-                [self application: nil openFile: path];
+
+                [WindowController controllerWithFilePath: path];
                 
                 [[NSDocumentController sharedDocumentController] noteNewRecentDocumentURL: url];
             }
@@ -59,5 +79,6 @@
     
     
 }
+#endif
 
 @end
