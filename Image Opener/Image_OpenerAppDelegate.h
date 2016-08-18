@@ -9,14 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface Image_OpenerAppDelegate : NSObject <NSApplicationDelegate> {
-@private
-    NSWindow *_window;
+
 }
 
-@property (assign) IBOutlet NSWindow *window;
-
-
-//-(IBAction)openDocument:(id)sender;
 
 
 @end
