@@ -98,7 +98,7 @@ static const char *TagToFormat(NSInteger tag)
         
         dict = [manager attributesOfItemAtPath: path error: &error];
         if (error) {
-            *outError = error;
+            if (outError )*outError = error;
             return NO;
         }
 
@@ -108,7 +108,7 @@ static const char *TagToFormat(NSInteger tag)
         return YES;
         
     } else {
-        *outError = [NSError errorWithDomain: NSURLErrorDomain code: 1 userInfo: nil];
+        if (outError) *outError = [NSError errorWithDomain: NSURLErrorDomain code: 1 userInfo: nil];
         return NO;
     }
     
@@ -131,6 +131,8 @@ static const char *TagToFormat(NSInteger tag)
     [_handle release];
     
     [_filePath release];
+    [_fileInfo release];
+
     [super dealloc];
 }
 
