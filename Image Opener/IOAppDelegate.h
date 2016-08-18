@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Image_OpenerAppDelegate : NSObject <NSApplicationDelegate> {
+@interface IOAppDelegate : NSObject <NSApplicationDelegate> {
 
 }
 

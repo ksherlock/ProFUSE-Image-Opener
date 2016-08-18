@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B61F50B11329D7040061B88D /* fuse_pascal in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AD1329D6DD0061B88D /* fuse_pascal */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B61F50B21329D7040061B88D /* profuse in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AF1329D6E90061B88D /* profuse */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B61F50B11329D7040061B88D /* fuse_pascal in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AD1329D6DD0061B88D /* fuse_pascal */; };
+		B61F50B21329D7040061B88D /* profuse in Copy Files */ = {isa = PBXBuildFile; fileRef = B61F50AF1329D6E90061B88D /* profuse */; };
 		B63BC07E1D6552EB00412B44 /* IODocument.m in Sources */ = {isa = PBXBuildFile; fileRef = B63BC07D1D6552EA00412B44 /* IODocument.m */; };
 		B672604B131DF025002ABC91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B672604A131DF025002ABC91 /* Cocoa.framework */; };
 		B6726055131DF025002ABC91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6726053131DF025002ABC91 /* InfoPlist.strings */; };
 		B6726058131DF025002ABC91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6726057131DF025002ABC91 /* main.m */; };
 		B672605B131DF025002ABC91 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B6726059131DF025002ABC91 /* Credits.rtf */; };
-		B672605E131DF025002ABC91 /* Image_OpenerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */; };
+		B672605E131DF025002ABC91 /* IOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B672605D131DF025002ABC91 /* IOAppDelegate.m */; };
 		B6726061131DF025002ABC91 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B672605F131DF025002ABC91 /* MainMenu.xib */; };
 		B6726069131DF054002ABC91 /* IODocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6726067131DF054002ABC91 /* IODocument.xib */; };
 		B672607D131F5570002ABC91 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B672607C131F5570002ABC91 /* Icon.icns */; };
@@ -40,7 +40,6 @@
 		B61F50AF1329D6E90061B88D /* profuse */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = profuse; sourceTree = "<group>"; };
 		B63BC07C1D6552EA00412B44 /* IODocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IODocument.h; sourceTree = "<group>"; };
 		B63BC07D1D6552EA00412B44 /* IODocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IODocument.m; sourceTree = "<group>"; };
-		B63BC07F1D65DFF100412B44 /* Image Opener.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Image Opener.entitlements"; sourceTree = "<group>"; };
 		B6726046131DF025002ABC91 /* Image Opener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Opener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B672604A131DF025002ABC91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B672604D131DF025002ABC91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -51,8 +50,8 @@
 		B6726056131DF025002ABC91 /* Image_Opener-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Image_Opener-Prefix.pch"; sourceTree = "<group>"; };
 		B6726057131DF025002ABC91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B672605A131DF025002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		B672605C131DF025002ABC91 /* Image_OpenerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image_OpenerAppDelegate.h; sourceTree = "<group>"; };
-		B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image_OpenerAppDelegate.m; sourceTree = "<group>"; };
+		B672605C131DF025002ABC91 /* IOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOAppDelegate.h; sourceTree = "<group>"; };
+		B672605D131DF025002ABC91 /* IOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOAppDelegate.m; sourceTree = "<group>"; };
 		B6726060131DF025002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B6726068131DF054002ABC91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IODocument.xib; sourceTree = "<group>"; };
 		B672607C131F5570002ABC91 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
@@ -109,11 +108,10 @@
 		B6726050131DF025002ABC91 /* Image Opener */ = {
 			isa = PBXGroup;
 			children = (
-				B63BC07F1D65DFF100412B44 /* Image Opener.entitlements */,
 				B63BC07C1D6552EA00412B44 /* IODocument.h */,
 				B63BC07D1D6552EA00412B44 /* IODocument.m */,
-				B672605C131DF025002ABC91 /* Image_OpenerAppDelegate.h */,
-				B672605D131DF025002ABC91 /* Image_OpenerAppDelegate.m */,
+				B672605C131DF025002ABC91 /* IOAppDelegate.h */,
+				B672605D131DF025002ABC91 /* IOAppDelegate.m */,
 				B672606A131DF0CD002ABC91 /* Resources */,
 				B6726051131DF025002ABC91 /* Supporting Files */,
 			);
@@ -176,7 +174,7 @@
 					B6726045131DF025002ABC91 = {
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -221,7 +219,7 @@
 			files = (
 				B6726058131DF025002ABC91 /* main.m in Sources */,
 				B63BC07E1D6552EB00412B44 /* IODocument.m in Sources */,
-				B672605E131DF025002ABC91 /* Image_OpenerAppDelegate.m in Sources */,
+				B672605E131DF025002ABC91 /* IOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,8 +319,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Image Opener/Image Opener.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -340,8 +338,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Image Opener/Image Opener.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;

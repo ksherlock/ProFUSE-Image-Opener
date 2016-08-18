@@ -6,9 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Image_OpenerAppDelegate.h"
+#import "IOAppDelegate.h"
 
-@implementation Image_OpenerAppDelegate
+@implementation IOAppDelegate
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
